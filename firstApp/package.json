@@ -8,6 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "predeploy": "ng build --baseHref=/Angular/",
     "deploy": "gh-pages -d dist/first-app"
   },
   "private": true,
