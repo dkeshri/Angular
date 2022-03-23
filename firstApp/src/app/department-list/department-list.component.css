@@ -1,0 +1,9 @@
+ul li{
+    cursor: pointer;
+    width: fit-content;
+    padding: 5px;
+}
+ul li:hover{
+    background-color: rgb(39, 58, 39);
+    color: white;
+}

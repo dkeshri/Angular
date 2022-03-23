@@ -11,6 +11,10 @@ nav{
     top:0;
     box-shadow: 0px 0px 10px #b3bbce;
 }
+nav a.active{
+  color: blue;
+  background-color: rgb(231, 173, 139);
+}
 .logo-container{
   display: flex;
   align-items: center;
