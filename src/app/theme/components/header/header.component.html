@@ -1,0 +1,23 @@
+<nav>
+    <div class="logo-container">
+        <div class="nav-logo" style="color:black">
+            <app-logo></app-logo>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="menu-container">
+        <a routerLink="views/home">Home</a>
+        <a routerLink="views/customers">Customers</a>
+        <a routerLink="views/products">Products</a>
+        <a routerLink="views/payments">Payments</a>
+        <a routerLink="views/about">About</a>
+    </div>
+    <div class="user-detail-container">
+        <span>Dkeshri</span>
+        <a routerLink="../auth/login" (click)="onLogout()">Logout</a>
+    </div>
+</nav>

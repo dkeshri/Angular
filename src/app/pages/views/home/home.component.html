@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="barcodeInput">
+        <input id="barcodeInput" autofocus type="text" style="width: 50%" 
+            pInputText placeholder="Customer Bar Code"
+            (keydown.enter)="onEnterPress($event)"
+            [(ngModel)] = "barcode"
+        >
+    </div>
+    <!-- <div class="cardContainer">
+        <mat-card class="card" onclick="alert('click')">
+            <mat-card-title>
+                <mat-card-title>Sale</mat-card-title>
+            </mat-card-title>
+            <mat-card-content class="center">
+                <p>
+                    Total $1000/-
+                </p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="card" onclick="alert('click')">
+            <mat-card-content class="center">
+                   <h1> Payments </h1>
+            </mat-card-content>
+        </mat-card>
+    </div> -->
+</div>
