@@ -3,11 +3,7 @@ import { Component, OnInit, } from '@angular/core';
 import { Router } from '@angular/router';
 import { faLock,faUserLock } from '@fortawesome/free-solid-svg-icons';
 import { AuthenticationService } from 'src/app/core/services/auth/authentication.service';
-interface UserCrediential{
-  shopId: number,
-  userName:string,
-  password:string
-}
+import { UserCrediential } from 'src/app/core/model/authenticated-user.model';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -44,8 +40,9 @@ export class LoginComponent implements OnInit {
     userCrediential.password = this.password;
     this.authenticationService.login(userCrediential)
     .subscribe((response)=>{
-      console.log(response);
-      this.router.navigate(['']);
+        if(response){
+          this.router.navigate(['']);
+        }
     });
   }
 }

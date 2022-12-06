@@ -1,8 +1,8 @@
-import { Observable, map } from 'rxjs';
+import {AuthenticatedUser, UserCrediential } from './../../model/authenticated-user.model';
+import { Observable, map, of } from 'rxjs';
 import { ApiService } from './../api/api.service';
 import { TokenService } from './../token.service';
 import { Injectable } from '@angular/core';
-import { AuthenticatedUser } from '../../model/authenticated-user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,12 +18,17 @@ export class AuthenticationService {
   logout(){
     this.tokenService.logout();
   }
-  login(userCrediential:any):Observable<boolean>{
-    return this.apiService.post('auth/login',userCrediential).pipe(
-      map((response:AuthenticatedUser)=>{
-        this.tokenService.setToken(response);
-        return true;
-      })
-    );
+  login(userCrediential:UserCrediential):Observable<boolean>{
+    // return this.apiService.post('auth/login',userCrediential).pipe(
+    //   map((response:AuthenticatedUser)=>{
+    //     this.tokenService.setToken(response);
+    //     return true;
+    //   })
+    // );
+    let authUser:AuthenticatedUser = {} as AuthenticatedUser;
+    authUser.token = 'jfsldkfjdlsfjdslfkjs dfjfl sjfldskjfljkf';
+    authUser.userName = userCrediential.userName;
+    this.tokenService.setToken(authUser);
+    return of(true);
   }
 }
