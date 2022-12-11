@@ -11,6 +11,7 @@ export class VideoComponent implements OnInit {
   videoStartSec:number = 4;
   videoEndSec:number = 8;
   videoId:string = "uUyWTjY0svw";
+  //https://www.youtube.com/watch?v=uUyWTjY0svw
   constructor() { }
 
   ngOnInit(): void {
