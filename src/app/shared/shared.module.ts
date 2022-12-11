@@ -1,14 +1,19 @@
 import { ThemeModule } from './../theme/theme.module';
 import { NgModule } from '@angular/core';
-
+import { VideoComponent } from './components/video/video.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    VideoComponent
+  ],
   imports: [
-    ThemeModule
+    ThemeModule,
+    YouTubePlayerModule
   ],
   exports:[
+    VideoComponent,
     ThemeModule
   ]
 })

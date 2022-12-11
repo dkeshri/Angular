@@ -1,4 +1,4 @@
-import { ThemeModule } from './../../../theme/theme.module';
+import { SharedModule } from './../../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,7 +17,7 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
   imports: [
     CommonModule,
     CustomersRoutingModule,
-    ThemeModule
+    SharedModule
   ]
 })
 export class CustomersModule { }
