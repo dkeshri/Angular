@@ -13,9 +13,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.homeService.getHome().subscribe((response)=>{
-      console.log(response);
-    });
+    
   }
   onEnterPress($event:any){
     let barcode = this.barcode;
